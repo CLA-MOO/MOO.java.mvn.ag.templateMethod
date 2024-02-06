@@ -38,7 +38,10 @@ mvn -f app test
 ```
 ### Probar 1 test
 ```
-mvn -f app test -Dtest="AppTest#shouldAnswerWithTrue" 
+mvn -f app test -Dtest="AppTest#testDiagMotorComun"
+mvn -f app test -Dtest="AppTest#testDiagMotorEconomico"
+mvn -f app test -Dtest="AppTest#testDiagMotorElectrico"
+mvn -f app test -Dtest="AppTest#testDiagMotorHibrido"
 ```
 ### Ejecutar App
 ```
