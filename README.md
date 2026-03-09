@@ -1,6 +1,8 @@
 
 # Ejercicio: evaluación de créditos con Template Method
 
+![credito-banca-comercial-ip](https://github.com/user-attachments/assets/ef793a23-cfc2-4175-b6aa-9a9c3b50a084)
+
 Ejercicio en el dominio de **finanzas** para modelar la evaluación de solicitudes de crédito mediante el patrón de diseño **Template Method**.
 
 La clase abstracta `EvaluadorCredito` define el template method `evaluarSolicitud(...)`, que fija el algoritmo general para:
