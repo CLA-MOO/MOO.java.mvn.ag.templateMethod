@@ -18,25 +18,25 @@ Las clases concretas `EvaluacionPrestamoPersonal`, `EvaluacionPrestamoAutomotriz
 ### Escenario de ejecución en consola del programa principal
 
 ```text
-=== Simulación de evaluación de créditos ===
-Producto: Préstamo personal
+=== Simulacion de evaluacion de creditos ===
+Producto: Prestamo personal
 Cliente: Ana Torres
 Monto solicitado: $9000.00
-Capacidad máxima: $9600.00
+Capacidad maxima: $9600.00
 Nivel de riesgo: BAJO
 Resultado: APROBADA
 
-Producto: Préstamo automotriz
-Cliente: Marta Díaz
+Producto: Prestamo automotriz
+Cliente: Marta Diaz
 Monto solicitado: $40000.00
-Capacidad máxima: $42000.00
+Capacidad maxima: $42000.00
 Nivel de riesgo: MEDIO
 Resultado: APROBADA
 
-Producto: Crédito hipotecario
+Producto: Credito hipotecario
 Cliente: Luis Herrera
 Monto solicitado: $150000.00
-Capacidad máxima: $172800.00
+Capacidad maxima: $172800.00
 Nivel de riesgo: MEDIO
 Resultado: APROBADA
 ```

@@ -20,10 +20,10 @@ public class AppTest {
         String resultado = evaluador.evaluarSolicitud("Ana Torres", 3200.0, 9000.0);
 
         assertEquals(
-                "Producto: Préstamo personal" + SALTO
+                "Producto: Prestamo personal" + SALTO
                         + "Cliente: Ana Torres" + SALTO
                         + "Monto solicitado: $9000.00" + SALTO
-                        + "Capacidad máxima: $9600.00" + SALTO
+                        + "Capacidad maxima: $9600.00" + SALTO
                         + "Nivel de riesgo: BAJO" + SALTO
                         + "Resultado: APROBADA",
                 resultado);
@@ -33,13 +33,13 @@ public class AppTest {
     public void debeEvaluarUnPrestamoAutomotrizAprobado() {
         EvaluadorCredito evaluador = new EvaluacionPrestamoAutomotriz();
 
-        String resultado = evaluador.evaluarSolicitud("Marta Díaz", 3500.0, 40000.0);
+        String resultado = evaluador.evaluarSolicitud("Marta Diaz", 3500.0, 40000.0);
 
         assertEquals(
-                "Producto: Préstamo automotriz" + SALTO
-                        + "Cliente: Marta Díaz" + SALTO
+                "Producto: Prestamo automotriz" + SALTO
+                        + "Cliente: Marta Diaz" + SALTO
                         + "Monto solicitado: $40000.00" + SALTO
-                        + "Capacidad máxima: $42000.00" + SALTO
+                        + "Capacidad maxima: $42000.00" + SALTO
                         + "Nivel de riesgo: MEDIO" + SALTO
                         + "Resultado: APROBADA",
                 resultado);
@@ -52,10 +52,10 @@ public class AppTest {
         String resultado = evaluador.evaluarSolicitud("Luis Herrera", 4800.0, 150000.0);
 
         assertEquals(
-                "Producto: Crédito hipotecario" + SALTO
+                "Producto: Credito hipotecario" + SALTO
                         + "Cliente: Luis Herrera" + SALTO
                         + "Monto solicitado: $150000.00" + SALTO
-                        + "Capacidad máxima: $172800.00" + SALTO
+                        + "Capacidad maxima: $172800.00" + SALTO
                         + "Nivel de riesgo: MEDIO" + SALTO
                         + "Resultado: APROBADA",
                 resultado);
@@ -65,7 +65,7 @@ public class AppTest {
     public void debeRechazarSolicitudesConRiesgoAlto() {
         EvaluadorCredito evaluador = new EvaluacionPrestamoPersonal();
 
-        String resultado = evaluador.evaluarSolicitud("Carla Pérez", 2000.0, 12000.0);
+        String resultado = evaluador.evaluarSolicitud("Carla Perez", 2000.0, 12000.0);
 
         assertTrue(resultado.contains("Nivel de riesgo: ALTO"));
         assertTrue(resultado.endsWith("Resultado: RECHAZADA"));
@@ -88,7 +88,7 @@ public class AppTest {
         EvaluadorCredito evaluador = new EvaluacionPrestamoAutomotriz();
 
         try {
-            evaluador.evaluarSolicitud("Marta Díaz", 0.0, 1000.0);
+            evaluador.evaluarSolicitud("Marta Diaz", 0.0, 1000.0);
             fail("Se esperaba IllegalArgumentException");
         } catch (IllegalArgumentException e) {
             assertEquals("Los montos deben ser mayores que cero", e.getMessage());
@@ -108,12 +108,12 @@ public class AppTest {
         }
 
         String salida = buffer.toString(StandardCharsets.UTF_8);
-        assertTrue(salida.contains("=== Simulación de evaluación de créditos ==="));
-        assertTrue(salida.contains("Producto: Préstamo personal"));
+        assertTrue(salida.contains("=== Simulacion de evaluacion de creditos ==="));
+        assertTrue(salida.contains("Producto: Prestamo personal"));
         assertTrue(salida.contains("Cliente: Ana Torres"));
-        assertTrue(salida.contains("Producto: Préstamo automotriz"));
-        assertTrue(salida.contains("Cliente: Marta Díaz"));
-        assertTrue(salida.contains("Producto: Crédito hipotecario"));
+        assertTrue(salida.contains("Producto: Prestamo automotriz"));
+        assertTrue(salida.contains("Cliente: Marta Diaz"));
+        assertTrue(salida.contains("Producto: Credito hipotecario"));
         assertTrue(salida.contains("Cliente: Luis Herrera"));
     }
 }
